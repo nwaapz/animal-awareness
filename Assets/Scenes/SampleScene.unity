@@ -328,6 +328,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &869540292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869540294}
+  - component: {fileID: 869540293}
+  m_Layer: 0
+  m_Name: cursor manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869540293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869540292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63498ec47e6af9047b75832e6a798382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GroundCursorIndicator
+  cursorPrefab: {fileID: 1789385558768977193, guid: 8a5fe0927a494fe43a9cbd775e43d34c, type: 3}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  heightOffset: 0.05
+  rotateTowardsPlayer: 1
+  player: {fileID: 0}
+  smoothSpeed: 20
+--- !u!4 &869540294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869540292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.39298, y: 4.42325, z: 10.40167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,8 +466,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.36399546, y: 0, z: 0, w: 0.9314008}
-  m_LocalPosition: {x: 7.2195854, y: 13.77, z: -2.5619645}
+  m_LocalRotation: {x: 0.3448871, y: 0, z: 0, w: 0.9386442}
+  m_LocalPosition: {x: 7.2195854, y: 18.869999, z: -9.251965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -434,13 +486,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RPGCameraFollow
   target: {fileID: 1564996061}
-  offset: {x: 0, y: 8.38, z: -8}
+  offset: {x: 0, y: 13.48, z: -14.69}
   smoothSpeed: 0.125
   useFixedUpdate: 0
   lookAtTarget: 1
   lookAtHeightOffset: 1
-  zoomMultiplier: 0.6
+  zoomInMultiplier: 0.6
+  runZoomOutMultiplier: 1.3
   zoomTransitionTime: 0.5
+  runZoomSmoothSpeed: 3
 --- !u!1 &1564996060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e203a96f46d50d2418d5574fb9be4523, type: 3}
@@ -634,3 +688,4 @@ SceneRoots:
   - {fileID: 1942508231}
   - {fileID: 379531113}
   - {fileID: 1834599894}
+  - {fileID: 869540294}
